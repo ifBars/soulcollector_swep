@@ -1,0 +1,1 @@
+resource.AddFile("materials/fonts/MidnightFlameGothic.ttf")
