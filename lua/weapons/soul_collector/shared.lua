@@ -7,7 +7,7 @@ SWEP.Author = "MrPPenguin"
 SWEP.Instructions = "Left Click - Collect souls from recently deceased players\nRight click - Display soul sell location/Scan for souls"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
-SWEP.Category = "PenguinRP"
+SWEP.Category = "DarkRP"
 
 SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/c_bugbait.mdl"
