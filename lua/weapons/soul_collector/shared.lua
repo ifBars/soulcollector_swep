@@ -41,6 +41,13 @@ function SWEP:Initialize()
     self:SetHoldType("normal")
 end
 
+local soulImage = Material("materials/vgui/penguinrp_soul_icon.png")
+
+-- Function to draw the image
+local function DrawSoul()
+    
+end
+
 -- Show nearby souls
 function SWEP:DrawHUD()
     local ply = self:GetOwner()
@@ -51,10 +58,10 @@ function SWEP:DrawHUD()
             local dist = pos:Distance(data.pos)
             if dist <= 1000 and CurTime() <= data.expire then -- Show souls within 1000 units
                 local screenPos = data.pos:ToScreen()
-                draw.SimpleText("Soul", "Trebuchet24", screenPos.x, screenPos.y, Color(255, 0, 0, 255), TEXT_ALIGN_CENTER)
-                surface.SetDrawColor(255, 0, 0, 255)
-                surface.DrawLine(screenPos.x - 10, screenPos.y - 10, screenPos.x + 10, screenPos.y + 10)
-                surface.DrawLine(screenPos.x - 10, screenPos.y + 10, screenPos.x + 10, screenPos.y - 10)
+                surface.SetDrawColor(255, 255, 255, 255)
+                surface.SetMaterial(soulImage)
+                local width, height = 64, 64 -- Change these values to your desired size
+                surface.DrawTexturedRect(screenPos.x, screenPos.y, width, height)
             end
         end
     end

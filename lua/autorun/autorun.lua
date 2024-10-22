@@ -1,0 +1,1 @@
+resource.AddFile("materials/vgui/penguinrp_soul_icon.png")
